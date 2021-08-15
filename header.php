@@ -1,4 +1,4 @@
-<?php include "conn.php"?>
+<?php include 'conn.php'; ?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,11 +9,4 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
 
 </head>
-<body>
-<nav class="navbar navbar-light bg-light">
-  <form class="container-fluid justify-content-start">
-    <a class="active" href="index.php"><button class="btn btn-outline-success me-2" type="button">Login</button></a>
-    <a href="register.php"><button class="btn btn-outline-success me-2" type="button">Register</button></a>
-    
-  </form>
-</nav> 
+

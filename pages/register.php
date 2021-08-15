@@ -1,8 +1,12 @@
-<?php 
-    include "header.php"; 
-    include "register_player.php";
-    $result = $conn->query("SELECT club_id, name from club");
-    
+<?php
+session_start();
+include '../header.php';
+include '../conn.php';
+include '../registration/register_player.php';
+include '../registration/register_club.php';
+include '../components/navbar.component.php';
+
+$result = $conn->query('SELECT club_id, name from club');
 ?>
 <body>
     <script>
@@ -32,7 +36,7 @@
                     <input type="text" name="name" class="form-control" required>
                 </div> 
                 <div class="form-group">
-                    <label>Username <?php echo "<b style='font-size:13; color:red;'>$username_err</b>";?></label>
+                    <label>Username <?php echo "<b style='font-size:13; color:red;'>$username_err</b>"; ?></label>
                     <input type="text" name="username" class="form-control" required>                    
                 </div>   
                 <div class="form-group">
@@ -58,24 +62,25 @@
                     <input type="text" name="surname" class="form-control" required>
                 </div>  
                 <div class="form-group">
-                    <label>Username <?php echo "<b style='font-size:13; color:red;'>$username_err</b>";?></label>
+                    <label>Username <?php echo "<b style='font-size:13; color:red;'>$username_err</b>"; ?></label>
                     <input type="text" name="username" class="form-control" required>                    
                 </div>    
                 <div class="form-group">
                     <label>Password</label>
                     <input type="password" name="password" class="form-control" required>
                 </div>
+                <label class="mt-2">Club</label> 
                 <div class="form-group">
                     <!-- Fill up with sql data -->
-                    <div class="btn-group mt-3 mb-2">                    
+                    
+                    <div class="btn-group mb-2">         
+                              
                     <select name="club">
-                        <?php 
-                            while($rows = $result->fetch_assoc()){
-                                $clubName = $rows['name'];
-                                $clubid = $rows['club_id'];
-                                echo "<option value = '$clubid'>$clubName</option>";
-                            }                        
-                        ?>
+                        <?php while ($rows = $result->fetch_assoc()) {
+                            $clubName = $rows['name'];
+                            $clubid = $rows['club_id'];
+                            echo "<option value = '$clubid'>$clubName</option>";
+                        } ?>
                     </select>
                     </div>
                 </div> 

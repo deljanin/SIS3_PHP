@@ -1,4 +1,4 @@
-<?php include "conn.php";
+<?php include "../conn.php";
 $username = $password = $name = $username_err ="";
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){    
