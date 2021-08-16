@@ -1,5 +1,8 @@
 <?php include '../conn.php';
-$username = $password = $name = $username_err = '';
+$username = '';
+$password = '';
+$name = '';
+$username_err = '';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     foreach ($_POST as $key => $value) {
@@ -18,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             } else {
                 $sql = "INSERT INTO club (name, username, password) VALUES ('$name','$username','$password')";
                 if ($stmt = mysqli_query($conn, $sql)) {
-                    header('location: index.php');
+                    header('location: ../index.php');
                 } else {
                     echo 'Something went wrong. Please try again later.';
                 }

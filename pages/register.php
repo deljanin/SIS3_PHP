@@ -30,7 +30,7 @@ $result = $conn->query('SELECT club_id, name from club');
             <input class="form-check-input"  type="radio" id="rClub" name="option">Club
         </div>
         <div id="clubForm" style="display:none">
-            <form action="register_club.php" method="post">
+            <form action="../registration/register_club.php" method="post">
                 <div class="form-group">
                     <label>Name of the club</label>
                     <input type="text" name="name" class="form-control" required>
@@ -52,7 +52,7 @@ $result = $conn->query('SELECT club_id, name from club');
         </div>           
         
         <div id="playerForm" >    
-            <form action="register.php" method="post">
+            <form action="../registration/register_player.php" method="post">
                 <div class="form-group">
                     <label>Your name</label>
                     <input type="text" name="name" class="form-control" required>

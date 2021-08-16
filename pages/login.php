@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Validate credentials
 
     if ($radio == 'club') {
-        $sql = "SELECT club_id FROM club WHERE username = '$username' AND password='$password'";
+        $sql = "SELECT club_id, name FROM club WHERE username = '$username' AND password='$password'";
         if ($result = mysqli_query($conn, $sql)) {
             if ($result->num_rows > 0) {
                 $data = mysqli_fetch_array($result);
@@ -36,6 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $_SESSION['loggedin'] = true;
                 $_SESSION['id'] = $data['club_id'];
                 $_SESSION['username'] = $username;
+                $_SESSION['name'] = $data['name'];
 
                 // Redirect user to welcome page
                 header('Location:club.php');
@@ -44,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             }
         }
     } else {
-        $sql = "SELECT player_id, username, password FROM player WHERE username = '$username' AND password='$password'";
+        $sql = "SELECT * FROM player WHERE username = '$username' AND password='$password'";
         if ($result = mysqli_query($conn, $sql)) {
             if ($result->num_rows > 0) {
                 session_start();
@@ -53,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $_SESSION['loggedin'] = true;
                 $_SESSION['id'] = $data['player_id'];
                 $_SESSION['username'] = $username;
-
+                $_SESSION['name'] = $data['name'] . ' ' . $data['surname'];
                 // Redirect user to welcome page
                 header('location: player.php');
             } else {
