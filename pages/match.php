@@ -40,13 +40,11 @@ $rows = '';
                 while ($rows0 = $p2->fetch_assoc()) {
                     $name2 = $rows0['name'];
                     $surname2 = $rows0['surname'];
-                    $player_id = $rows0['player_id'];
                 }
                 echo "<td>$name2 $surname2</td>";
                 echo "<td>     
-                <form action='../registration/register_actions.php' method='post'>
+                <form action='playAction.php' method='post'>
                 <input type='submit' class='btn btn-primary' name='btn' value='Play'>
-                <input type='hidden' value='$player_id' name='oponent'/>
                 <input type='hidden' value='$match_id' name='match'/>
                 </form>
                 </td>";
@@ -63,13 +61,11 @@ $rows = '';
                 while ($rows0 = $p1->fetch_assoc()) {
                     $name1 = $rows0['name'];
                     $surname1 = $rows0['surname'];
-                    $player_id = $rows0['player_id'];
                 }
                 echo "<td>$name1 $surname1</td>";
                 echo "<td>
-                <form action='../registration/register_actions.php' method='post'>
+                <form action='playAction.php' method='post'>
                 <input type='submit' class='btn btn-primary' value='Play' onClick=''>
-                <input type='hidden' value='$player_id' name='oponent'/>
                 <input type='hidden' value='$match_id' name='match'/>
 
                 </form>

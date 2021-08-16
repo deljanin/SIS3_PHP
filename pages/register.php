@@ -24,7 +24,7 @@ $result = $conn->query('SELECT club_id, name from club');
         <h2>Sign Up</h2>
         <p>Please fill this form to create the club account.</p>
         <div class="form-check form-check-inline" onchange="myFunction()">
-            <input class="form-check-input" type="radio" id="rPlayer" name="option">Player
+            <input class="form-check-input" type="radio" id="rPlayer" name="option" checked>Player
         </div>
         <div class="form-check form-check-inline" onchange="myFunction()">
             <input class="form-check-input"  type="radio" id="rClub" name="option">Club
