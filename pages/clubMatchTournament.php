@@ -2,7 +2,7 @@
 session_start();
 include '../header.php';
 include '../seasson.php';
-include '../components/clubNavbar.component.php';
+include '../components/clubNavBar.component.php';
 
 $sess = $_SESSION['id'];
 
