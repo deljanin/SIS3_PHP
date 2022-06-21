@@ -4,14 +4,14 @@ Setup procedure:
 
 2. Run Xampp Control Panel and click start buttons right of the "Apache" and "MySql"
 
-Now to setup the website: 
+Now to setup the website: <br/>
 3. Open file explorer and navigate to the htdocs folder, full path: C:\xampp\htdocs\
 
 4. In this folder create a new folder and name it something. (I recomend it's the name of the app with no space bars or special characters ex: SIS3_PHP )
 
 5. In this new folder with the path that should look like this: C:\xampp\htdocs\SIS3_PHP , clone this git repository.
 
-Now for the database: 
+Now for the database: <br/>
 6. Open the xampp control panel again and copy the port that is in the same line as Apache. (Usually 80)
 
 7. Open a browser and type localhost:80 (Replace 80 with yours if it is different)
@@ -28,7 +28,7 @@ Now for the database:
 
 13. Click Go button on the right most side of the page.
 
-Display: 
+Display: <br/>
 14. Finally to see the website open "localhost:80/SIS3_PHP" in a browser. (Here mind the name of your folder in the htdocs folder and the port from xampp control panel.)
 
 15. Now open your git repository folder with some editor and you are all set. Happy hacking!
